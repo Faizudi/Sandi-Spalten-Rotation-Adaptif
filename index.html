@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandi-Spalten-Rotation-Adaptif</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Sandi-Spalten-Rotation-Adaptif</h1>
+  <p class="subtitle">Transposisi Kolom Rotasi Adaptif &mdash; enkripsi &amp; dekripsi blok 2 &times; 5.</p>
+
+  <div class="card">
+    <div class="field">
+      <label for="inputText">Teks</label>
+      <textarea id="inputText" placeholder="Masukkan plaintext (untuk enkripsi) atau ciphertext (untuk dekripsi)"></textarea>
+    </div>
+    <div class="field">
+      <label for="secretKey">Kata kunci (secret key)</label>
+      <input type="text" id="secretKey" placeholder="Contoh: KUNCI" maxlength="5" autocomplete="off">
+      <div class="hint">Tepat 5 huruf (A&ndash;Z), sesuai jumlah kolom matriks. Huruf kecil otomatis menjadi kapital.</div>
+    </div>
+    <div class="actions">
+      <button id="btnEncrypt" type="button">Enkripsi</button>
+      <button id="btnDecrypt" type="button">Dekripsi</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="result-head">
+      <label>Hasil</label>
+      <button class="secondary" id="btnCopy" type="button">Salin</button>
+    </div>
+    <div id="output" class="output">-</div>
+  </div>
+
+  <div class="card">
+    <label>Catatan log proses</label>
+    <pre id="log">Belum ada proses.</pre>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
